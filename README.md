@@ -199,7 +199,9 @@
 + 2020-CVPR - Learning Event-Based Motion Deblurring. [[Paper]](https://arxiv.org/abs/2004.05794)
 
 + 2020-CVPR - Efficient Dynamic Scene Deblurring Using Spatially Variant Deconvolution Network With Optical Flow Guided Training. [[Paper]](https://openaccess.thecvf.com/content_CVPR_2020/html/Yuan_Efficient_Dynamic_Scene_Deblurring_Using_Spatially_Variant_Deconvolution_Network_With_CVPR_2020_paper.html)
-
+  + IDEA : Deform conv를 활용한(offset, weight 둘다 예측하는 듯) Feature Deconvolution, Deform conv의 sampling 포지션이 즉 blur kernel과 비슷함. optical flow를 통해 이를 가이드. 엄청나게 가볍고 빠른 네트워크라고 주장. Perfomance : GoPro(29.81)
+  + Limitations : optical flow로 가이드하는 아이디어는 좋은듯,, 근데 성능은 그저 그렇다.?
+  
 + 2020-CVPR - Deblurring using Analysis-Synthesis Networks Pair. [[Paper]](https://arxiv.org/abs/2004.02956)
   + IDEA : auto-correlation으로 커널 추정하는 Analysis network, 추정된 커널을 ax+b 꼴로 사용하는 synthesis network를 통해 deblurring을 수행, kohler(30.22) 의 성능을 보임, kernel size를 3개로 나누고 네트워크 3개 따로 학습하면 성능향상, 예전에 실험하던 아이디어랑 비슷해서 매우 반가움, Lai et al 에서도 꽤나 잘돼네... uniform deblurring을 잘하면 lai et al에서 잘돼나..?
   + Limitations : 정해진 size의 커널만을 추정가능 => 커널 form 일반화 필요, large blur에는 여전히 잘 안됨, ax+b 꼴로 커널을 condition 주는게... 너무 약하지 않나? => quetient layer?
