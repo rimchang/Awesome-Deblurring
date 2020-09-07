@@ -348,7 +348,9 @@
 + 2020-CVPR - Blurry Video Frame Interpolation. [[Paper]](https://arxiv.org/abs/2002.12259)[[Code]](https://github.com/laomao0/BIN)
 
 + 2020-ECCV - Spatio-Temporal Efficient Recurrent Neural Network for Video Deblurring.
-
+  + IDEA : RNN 구조를 제안, 과거, 미래 프레임을 함께 쓰는것이 특이, Reisdual, Densenet에 영향을 받은 RDB, channel attetion으로 인접 프레임 합침. beam-splitter 데이터셋 제안
+  + Limitations : 여전히 temporal receptive field가 매우 작음, video deblurring의 경우 매우 커야 한다고 생각. dataset도 개선 여지가 많다.
+  
 + 2020-ECCV - Learning Event-Driven Video Deblurring and Interpolation.
 
 ## Other Closely Related Works
@@ -397,7 +399,9 @@
 + 2019-CVPR - Deep Defocus Map Estimation using Domain Adaptation. [[Paper]](http://openaccess.thecvf.com/content_CVPR_2019/html/Lee_Deep_Defocus_Map_Estimation_Using_Domain_Adaptation_CVPR_2019_paper.html)[[Dataset and Code]](https://github.com/codeslake/DMENet)
 
 + 2020-ECCV - Defocus Deblurring Using Dual-Pixel Data. [[Paper]](https://arxiv.org/abs/2005.00305)
-
+  + IDEA : Defocus blurred image (f/4), all-focus image (f/22) 를 삼각대를 통해 촬영하여 데이터셋 수집. 네트워크는 간단한 u-net 구조
+  + Limitations : blurred, sharp image 밝기를 맞추기 위해 조리개 우선 모드로 두고 오토로 촬영, 수동으로 하지 않은 이유는?
+  
 + 2020-ECCV - Rethinking the Defocus Blur Detection Problem and A Real-Time Deep DBD Model.
 
 + 2020-ECCV - Defocus Blur Detection via Depth Distillation. [[Paper]](https://arxiv.org/abs/2007.08113)[[Code]](https://github.com/vinthony/depth-distillation)
