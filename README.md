@@ -201,14 +201,14 @@
 + 2020-CVPR - Efficient Dynamic Scene Deblurring Using Spatially Variant Deconvolution Network With Optical Flow Guided Training. [[Paper]](https://openaccess.thecvf.com/content_CVPR_2020/html/Yuan_Efficient_Dynamic_Scene_Deblurring_Using_Spatially_Variant_Deconvolution_Network_With_CVPR_2020_paper.html)
 
 + 2020-CVPR - Deblurring using Analysis-Synthesis Networks Pair. [[Paper]](https://arxiv.org/abs/2004.02956)
-  + IDEA : auto-correlation으로 커널 추정하는 Analysis network, 추정된 커널을 ax+b 꼴로 사용하는 synthesis network를 통해 deblurring을 수행, kohler(30.22) 의 성능을 보임, 예전에 실험하던 아이디어랑 비슷해서 매우 반가움
-  + Limitations : 정해진 size의 커널만을 추정가능, large blur에는 여전히 잘 안됨, ax+b 꼴로 커널을 condition 주는게... 너무 약하지 않나?
+  + IDEA : auto-correlation으로 커널 추정하는 Analysis network, 추정된 커널을 ax+b 꼴로 사용하는 synthesis network를 통해 deblurring을 수행, kohler(30.22) 의 성능을 보임, kernel size를 3개로 나누고 네트워크 3개 따로 학습하면 성능향상, 예전에 실험하던 아이디어랑 비슷해서 매우 반가움
+  + Limitations : 정해진 size의 커널만을 추정가능 => 커널 form 일반화 필요, large blur에는 여전히 잘 안됨, ax+b 꼴로 커널을 condition 주는게... 너무 약하지 않나? => quetient layer?
   
 + 2020-IEEEAccess - Scale-Iterative Upscaling Network for Image Deblurring. [[Paper]](https://ieeexplore.ieee.org/document/8963625)[[Code]](https://github.com/minyuanye/SIUN)
 
 + 2020-ECCV - Multi-Temporal Recurrent Neural Networks For Progressive Non-Uniform Single Image Deblurring With Incremental Temporal Training. [[Paper]](https://arxiv.org/abs/1911.07410)
   + IDEA : 일종의 curriculum learning 방법인 Multi-Temporal 구조를 처음으로 제안, blur를 조금씩 줄여간다는 점에서 그럴듯 한 구조로 보인다. Performance : GoPro(31.15)
-  + Limitations : GoPro와 같이 Synthetic dataset일 경우에만 적용 가능, Table 수치들이 약간 못믿을만 하다.
+  + Limitations : GoPro와 같이 Synthetic dataset일 경우에만 적용 가능, 라이팅이 뭔가 학생이 쓴것 같음.
 + 2020-ECCV - Stacking Networks Dynamically for Image Restoration Based on the Plug-and-Play Framework. [[Paper]](http://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123580443.pdf)
 
 ## Non-Blind-Deblurring
